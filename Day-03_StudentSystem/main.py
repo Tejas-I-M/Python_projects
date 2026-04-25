@@ -6,6 +6,7 @@ class Student:
     def add_marks(self,marks):
         if marks < 0 or marks > 100:
             print("Invalid marks. Marks should be between 0 and 100.")
+            return
         self.__marks.append(marks)
     def calculate_average(self):
         if len(self.__marks) ==0:
@@ -28,5 +29,5 @@ class Student:
         print(f"Average Marks: {self.calculate_average():.2f} %")
         print(f"Grade: {self.get_grade()}")
 student1 = Student("Tejas",420)
-
+student1.add_marks(-100)
 student1.display()
